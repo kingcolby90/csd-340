@@ -1,0 +1,33 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4 {
+    background-color: #282c34;
+    color: #ffffff;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+/* Link styling */
+a {
+    color: #D6A800;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F4C542;
+}
+
+a:visited {
+    color: #B89E00;
+}
