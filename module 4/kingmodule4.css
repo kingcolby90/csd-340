@@ -35,4 +35,9 @@ body {
     font-size: 0.75em;
     color: rgba(0, 0, 0, 0.6);
   }
+  figure img {
+    width: 10em;
+    height: 12em;
+    object-fit: cover;
+  }
   
