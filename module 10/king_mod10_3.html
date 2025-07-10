@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #2C3A47;
+    }
+
+    .image-box {
+      display: inline-block;
+      margin: 20px;
+      border: 3px solid #4B6584;
+    }
+
+    img {
+      width: 200px;
+      height: 150px;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #73020C;
+      font-style: italic;
+    }
+  </style>
+
+  <script>
+    function swapImage(id, newSrc) {
+      document.getElementById(id).src = newSrc;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+  <p>Hover over an image to see it change!</p>
+
+  <div class="image-box">
+    <img id="img1" src="art.jpeg" id="img2" src="son_art.jpeg"
+         onmouseover="swapImage('img1')"
+         onmouseout="swapImage('img2')" alt="Art">
+  </div>
+
+  <div class="image-box">
+    <img id="img3" src="basketball.JPG" id="img4" src="son_soccer.JPG"
+         onmouseover="swapImage('img3')"
+         onmouseout="swapImage('img4')" alt="Basketball">
+  </div>
+
+  <div class="image-box">
+    <img id="img5" src="fatherandson.JPG" id="img6" src="IMG_6716.JPG"
+         onmouseover="swapImage('img5')"
+         onmouseout="swapImage('img6')" alt="Fatherhood">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 King</p>
+  </footer>
+</body>
+</html>
