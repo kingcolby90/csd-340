@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #todoOutput {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+  <p>Enter a task into the box, then click "Add" to save it. Use "Delete Last Entry" to remove the most recent item, or "Display" to see your full list.</p>
+
+  <input type="text" id="todoInput" placeholder="Enter a task here">
+  <button onclick="addItem()">Add</button>
+  <button onclick="deleteLastItem()">Delete Last Entry</button>
+  <button onclick="displayList()">Display</button>
+
+  <div id="todoOutput"></div>
+
+  <script>
+    let todoList = [];
+
+    function addItem() {
+      const input = document.getElementById("todoInput").value.trim();
+      if (input !== "") {
+        todoList.push(input);
+        alert(`Added: "${input}" at position ${todoList.length}`);
+        document.getElementById("todoInput").value = "";
+      } else {
+        alert("Please enter a valid task.");
+      }
+    }
+
+    function deleteLastItem() {
+      if (todoList.length > 0) {
+        const removed = todoList.pop();
+        alert(`Deleted: "${removed}"`);
+      } else {
+        alert("There are no tasks to delete.");
+      }
+    }
+
+    function displayList() {
+      const outputDiv = document.getElementById("todoOutput");
+      if (todoList.length === 0) {
+        outputDiv.innerHTML = "<p>Your to-do list is empty.</p>";
+      } else {
+        let displayHTML = "<ol>";
+        todoList.forEach((item, index) => {
+          displayHTML += `<li>${item}</li>`;
+        });
+        displayHTML += "</ol>";
+        outputDiv.innerHTML = displayHTML;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
